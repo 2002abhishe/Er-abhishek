@@ -4,78 +4,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Er Abhishek Chaudhary</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Er. Abhishek | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #007bff;
     }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --accent-color: #00bcd4;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      color: #1F2937;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease-in-out;
     }
+
     header {
-      background-color: #4F46E5;
+      padding: 1rem 2rem;
+      background-color: var(--accent-color);
       color: white;
-      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-btn {
+      background: white;
+      color: var(--accent-color);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
       text-align: center;
     }
-    header img {
+
+    #home img {
       width: 150px;
-      height: 150px;
       border-radius: 50%;
-      object-fit: cover;
+      border: 3px solid var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
       margin-top: 15px;
-      border: 4px solid white;
     }
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      color: #4F46E5;
-      margin-bottom: 10px;
-    }
+
     .skills span {
       display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
+      background: var(--accent-color);
+      color: white;
       padding: 8px 15px;
       margin: 5px;
       border-radius: 20px;
-      font-weight: 500;
     }
-    footer {
-      background: #e5e7eb;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    a {
-      color: #4F46E5;
+
+    .contact a {
+      color: var(--accent-color);
       text-decoration: none;
+      display: block;
+      margin: 8px 0;
     }
-    a:hover {
-      text-decoration: underline;
+
+    footer {
+      padding: 15px;
+      text-align: center;
+      background-color: var(--accent-color);
+      color: white;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Er Abhishek Chaudhary</h1>
-    <p>Electrical Engineer | Passionate Coder</p>
-    <img src="abhishek.jpg" alt="Abhishek Chaudhary" />
+    <div><strong>Er. Abhishek</strong></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleTheme()">Light/Dark</button>
   </header>
-  <section>
+
+  <section id="home">
+    <img src="profile.jpg" alt="Abhishek Photo" />
+    <h1>Welcome to my profile buddy</h1>
+    <h2>I'm Er. Abhishek — Electrical Engineer & Web Developer</h2>
+    <a href="#about" class="btn">Know More</a>
+  </section>
+
+  <section id="about">
     <h2>About Me</h2>
     <p>I am an Electrical Engineer from Bihar. I love coding and enjoy building websites and learning new technologies.</p>
+    
+    <p><strong>Email:</strong> abkc38394@gmail.com</p>
   </section>
-  <section>
+
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
       <span>DCA</span>
@@ -83,13 +145,39 @@
       <span>Website Development</span>
     </div>
   </section>
-  <section>
-    <h2>Contact</h2>
-    <p><strong>Mobile:</strong> <a href="tel:6299281382">6299281382</a></p>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/abhishek_creation_29" target="_blank">@abhishek_creation_29</a></p>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Project 1 - Personal Portfolio Website</p>
+    <p>Project 2 - Coming Soon</p>
   </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Mobile:</strong> 6299281382</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/abhishek_creation_29" target="_blank">@abhishek_creation_29</a></p>
+    
+  </section>
+
   <footer>
-    &copy; 2025 Er Abhishek Chaudhary. All rights reserved.
+    &copy; 2025 Er. Abhishek. All rights reserved.
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
+
 </body>
 </html>
